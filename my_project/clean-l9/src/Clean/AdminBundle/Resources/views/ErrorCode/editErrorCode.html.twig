@@ -1,0 +1,68 @@
+{% include 'CleanAdminBundle:Common:meta.html.twig' %}
+<title>错误码管理</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 错误码管理 <span class="c-gray en">&gt;</span> 更新 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+
+<article class="page-container">
+    <form class="form form-horizontal" id="form" action="/admin/editAdminUserSubmit" method="post">  
+        <input type="hidden" value="{{errorCodeInfo.errorCodeId}}" id="errorCodeId" name="errorCodeId">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">公司/型号：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <select name="companyId" id="companyId">
+                    <option value="-1" {%if(errorCodeInfo.companyId==-1)%}selected{%endif%}>通用</option>
+                    {% for company in companyInfo %}
+                    <option value="{{company.companyId}}" {%if(errorCodeInfo.companyId==company.companyId)%}selected{%endif%}>{{company.companyName|raw}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">错误码值：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{errorCodeInfo.code|raw}}" placeholder="错误码值" id="code" name="code">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">错误类型：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{errorCodeInfo.errType|raw}}" placeholder="错误类型" id="errType" name="errType">
+            </div>
+        </div> 
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">错误语CN：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{errorCodeInfo.chMsg|raw}}" placeholder="错误语CN" id="chMsg" name="chMsg">
+            </div>
+        </div> 
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">错误语EN：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{errorCodeInfo.enMsg|raw}}" placeholder="错误语EN" id="enMsg" name="enMsg">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">韩语ko: </label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{errorCodeInfo.koMsg|raw}}" placeholder="koMsg" id="koMsg" name="koMsg">
+            </div>
+        </div>           
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn btn-primary radius" id="submit" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>                
+                <button id="reset" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</article>
+
+{% include 'CleanAdminBundle:Common:footer.html.twig' %}
+
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/messages_zh.js"></script> 
+<script type="text/javascript" src="/assets/lib/md5.min.js"></script>
+<script type="text/javascript" src="/assets/js/editErrorCode.min.js"></script> 
+</body>
+</html>

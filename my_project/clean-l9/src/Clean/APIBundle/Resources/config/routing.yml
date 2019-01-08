@@ -1,0 +1,645 @@
+clean_api_getUserInfo:
+    path:  /api{_splitword}{_locale}/getUserInfo
+    defaults: { _controller: CleanAPIBundle:User:getUserInfo }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_register:
+    path:  /api{_splitword}{_locale}/register
+    defaults: { _controller: CleanAPIBundle:User:register }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_login:
+    path:  /api{_splitword}{_locale}/login
+    defaults: { _controller: CleanAPIBundle:User:login }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_bindMachine:
+    path:  /api{_splitword}{_locale}/bindMachine
+    defaults: { _controller: CleanAPIBundle:User:bindMachine }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_getUserMachineInfo:
+    path:  /api{_splitword}{_locale}/getUserMachineInfo
+    defaults: { _controller: CleanAPIBundle:User:getUserMachineInfo }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_editUserInfo:
+    path:  /api{_splitword}{_locale}/editUserInfo
+    defaults: { _controller: CleanAPIBundle:User:editUserInfo }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_editUserMachine:
+    path:  /api{_splitword}{_locale}/editUserMachine
+    defaults: { _controller: CleanAPIBundle:User:editUserMachine }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_editSharerUserInfo:
+    path:  /api{_splitword}{_locale}/editSharerUserInfo
+    defaults: { _controller: CleanAPIBundle:User:editSharerUserInfo }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_addSharerUser:
+    path:  /api{_splitword}{_locale}/addSharerUser
+    defaults: { _controller: CleanAPIBundle:User:addSharerUser }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_uploadCleanFile:
+    path:  /api{_splitword}{_locale}/uploadCleanFile
+    defaults: { _controller: CleanAPIBundle:User:uploadCleanFile }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_uploadAvatarFile:
+    path:  /api{_splitword}{_locale}/uploadAvatarFile
+    defaults: { _controller: CleanAPIBundle:User:uploadAvatarFile }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_editUserNoteName:
+    path:  /api{_splitword}{_locale}/editUserNoteName
+    defaults: { _controller: CleanAPIBundle:User:editUserNoteName }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_exchangeMachine:
+    path:  /api{_splitword}{_locale}/exchangeMachine
+    defaults: { _controller: CleanAPIBundle:User:exchangeMachine }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+# 添加清扫记录老数据到表
+clean_api_setMachineSweepingList:
+    path:  /api{_splitword}{_locale}/setMachineSweepingList
+    defaults: { _controller: CleanAPIBundle:Machine:setMachineSweepingList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+# 获取数据表里面的清扫记录列表
+clean_api_getMachineSweepingListSql:
+    path:  /api{_splitword}{_locale}/getMachineSweepingListSql
+    defaults: { _controller: CleanAPIBundle:Machine:getMachineSweepingListSql }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+
+clean_api_getMachineSweepingList:
+    path:  /api{_splitword}{_locale}/getMachineSweepingList
+    defaults: { _controller: CleanAPIBundle:Machine:getMachineSweepingList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_getMachineSweeping:
+    path:  /api{_splitword}{_locale}/getMachineSweeping
+    defaults: { _controller: CleanAPIBundle:Machine:getMachineSweeping }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+        
+clean_api_deleteMachineSweeping:
+    path:  /api{_splitword}{_locale}/deleteMachineSweeping
+    defaults: { _controller: CleanAPIBundle:Machine:deleteMachineSweeping }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_api_getProductionInfo:
+    path:  /api{_splitword}{_locale}/getProductionInfo
+    defaults: { _controller: CleanAPIBundle:BasicInfo:getProductionInfo }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_getMessageList:
+    path:  /api{_splitword}{_locale}/getMessageList
+    defaults: { _controller: CleanAPIBundle:BasicInfo:getMessageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_updateFirmware:
+    path:  /api{_splitword}{_locale}/updateFirmware
+    defaults: { _controller: CleanAPIBundle:BasicInfo:updateFirmware }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_updateAppVersion:
+    path:  /api{_splitword}{_locale}/updateAppVersion
+    defaults: { _controller: CleanAPIBundle:BasicInfo:updateAppVersion }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+        
+
+clean_api_getMessageContent:
+    path:  /api{_splitword}{_locale}/getMessageContent
+    defaults: { _controller: CleanAPIBundle:BasicInfo:getMessageContent }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_getProductionItem:
+    path:  /api{_splitword}{_locale}/getProductionItem
+    defaults: { _controller: CleanAPIBundle:BasicInfo:getProductionItem }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_uploadMachine:
+    path:  /api{_splitword}{_locale}/uploadMachine
+    defaults: { _controller: CleanAPIBundle:BasicInfo:uploadMachine }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_getIPAddress:
+    path:  /api{_splitword}{_locale}/getIPAddress
+    defaults: { _controller: CleanAPIBundle:BasicInfo:getIPAddress }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_getUserProtocol:
+    path:  /api{_splitword}{_locale}/getUserProtocol
+    defaults: { _controller: CleanAPIBundle:BasicInfo:getUserProtocol }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+
+clean_api_getMachineData:
+    path:  /api{_splitword}{_locale}/getMachineData
+    defaults: { _controller: CleanAPIBundle:Machine:getMachineData }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_getUserPassword:
+    path:  /api{_splitword}{_locale}/getUserPassword
+    defaults: { _controller: CleanAPIBundle:User:getUserPassword }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_resetPasswordPage:
+    path:  /member{_splitword}{_locale}/resetPasswordPage
+    defaults: { _controller: CleanAPIBundle:User:resetPasswordPage }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_resetPassword:
+    path:  /member{_splitword}{_locale}/resetPassword
+    defaults: { _controller: CleanAPIBundle:User:resetPassword }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_bind:
+    path:  /api{_splitword}{_locale}/machine/bind
+    defaults: { _controller: CleanAPIBundle:User:bind }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_api_getGoodsUrl:
+    path:  /api{_splitword}{_locale}/getGoodsUrl
+    defaults: { _controller: CleanAPIBundle:BasicInfo:getGoodsUrl }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+        
+
+clean_api_updateFirmwareAPP:
+    path:  /api{_splitword}{_locale}/updateFirmwareAPP
+    defaults: { _controller: CleanAPIBundle:BasicInfo:updateFirmwareAPP }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*  
+
+
+clean_api_getErrorCode:
+    path:  /api{_splitword}{_locale}/getErrorCode
+    defaults: { _controller: CleanAPIBundle:BasicInfo:getErrorCode }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_testData:
+    path:  /api{_splitword}{_locale}/testData
+    defaults: { _controller: CleanAPIBundle:New:testData }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_api_machine_getMapData:
+    path:  /api{_splitword}{_locale}/getMapData
+    defaults: { _controller: CleanAPIBundle:New:getMapData }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*   
+
+clean_api_machine_getMachineMap:
+    path:  /api{_splitword}{_locale}/getMachineMap
+    defaults: { _controller: CleanAPIBundle:Machine:getMachineMap }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+#扫地机
+clean_api_machine_createMachine:
+    path:  /api{_splitword}{_locale}/createMachine
+    defaults: { _controller: CleanAPIBundle:New:createMachine }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_machine_checkMachine:
+    path:  /api{_splitword}{_locale}/checkMachine
+    defaults: { _controller: CleanAPIBundle:New:checkMachine }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+
+#新的扫地机接口
+clean_api_robot_broadcast:
+    path:  /robot{_splitword}{_locale}/broadcast
+    defaults: { _controller: CleanAPIBundle:Robot:broadcast }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_robot_response:
+    path:  /robot{_splitword}{_locale}/response
+    defaults: { _controller: CleanAPIBundle:Robot:response }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_robot_getIPList:
+    path:  /robot{_splitword}{_locale}/getIPList
+    defaults: { _controller: CleanAPIBundle:Robot:getIPList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_robot_login:
+    path:  /robot{_splitword}{_locale}/login
+    defaults: { _controller: CleanAPIBundle:Robot:login }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_robot_register:
+    path:  /robot{_splitword}{_locale}/register
+    defaults: { _controller: CleanAPIBundle:Robot:register }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*   
+
+
+clean_api_robot_bind:
+    path:  /robot{_splitword}{_locale}/bind
+    defaults: { _controller: CleanAPIBundle:Robot:bind }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_robot_uploadCleanFile:
+    path:  /robot{_splitword}{_locale}/uploadCleanFile
+    defaults: { _controller: CleanAPIBundle:Robot:uploadCleanFile }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_robot_uploadCleanLog:
+    path:  /robot{_splitword}{_locale}/uploadCleanLog
+    defaults: { _controller: CleanAPIBundle:Robot:uploadCleanLog }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*   
+
+clean_api_robot_updateCleanData:
+    path:  /robot{_splitword}{_locale}/updateCleanData
+    defaults: { _controller: CleanAPIBundle:Robot:updateCleanData }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_api_silentUpdateFirmware:
+    path:  /robot{_splitword}{_locale}/silentUpdateFirmware
+    defaults: { _controller: CleanAPIBundle:BasicInfo:silentUpdateFirmware }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+
+#新的注册
+clean_api_api_verifyPhoneCode:
+    path:  /api{_splitword}{_locale}/verifyPhoneCode
+    defaults: { _controller: CleanAPIBundle:UserRe:verifyPhoneCode }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_api_registerByPhone:
+    path:  /api{_splitword}{_locale}/registerByPhone
+    defaults: { _controller: CleanAPIBundle:UserRe:registerByPhone }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*   
+
+clean_api_api_editUserPhone:
+    path:  /api{_splitword}{_locale}/editUserPhone
+    defaults: { _controller: CleanAPIBundle:UserRe:editUserPhone }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_api_forgetPasswordByPhone:
+    path:  /api{_splitword}{_locale}/forgetPasswordByPhone
+    defaults: { _controller: CleanAPIBundle:UserRe:forgetPasswordByPhone }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*  
+
+clean_api_api_verifyEmailCode:
+    path:  /api{_splitword}{_locale}/verifyEmailCode
+    defaults: { _controller: CleanAPIBundle:UserRe:verifyEmailCode }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*  
+
+clean_api_api_registerByEmail:
+    path:  /api{_splitword}{_locale}/registerByEmail
+    defaults: { _controller: CleanAPIBundle:UserRe:registerByEmail }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*   
+
+clean_api_api_editUserEmail:
+    path:  /api{_splitword}{_locale}/editUserEmail
+    defaults: { _controller: CleanAPIBundle:UserRe:editUserEmail }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*   
+
+clean_api_api_forgetPasswordByEmail:
+    path:  /api{_splitword}{_locale}/forgetPasswordByEmail
+    defaults: { _controller: CleanAPIBundle:UserRe:forgetPasswordByEmail }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*   
+
+clean_api_api_registerByWeiXin:
+    path:  /api{_splitword}{_locale}/registerByWeiXin
+    defaults: { _controller: CleanAPIBundle:UserRe:registerByWeiXin }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*   
+
+clean_api_api_loginByWeiXin:
+    path:  /api{_splitword}{_locale}/loginByWeiXin
+    defaults: { _controller: CleanAPIBundle:UserRe:loginByWeiXin }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*  
+
+clean_api_api_loginByFacebook:
+    path:  /api{_splitword}{_locale}/loginByFacebook
+    defaults: { _controller: CleanAPIBundle:UserRe:loginByFacebook }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.* 
+        
+clean_api_api_addUserInfo:
+    path:  /api{_splitword}{_locale}/addUserInfo
+    defaults: { _controller: CleanAPIBundle:UserRe:addUserInfo }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*  
+
+clean_api_api_checkPhoneCode:
+    path:  /api{_splitword}{_locale}/checkPhoneCode
+    defaults: { _controller: CleanAPIBundle:UserRe:checkPhoneCode }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*  
+
+clean_api_api_checkEmailCode:
+    path:  /api{_splitword}{_locale}/checkEmailCode
+    defaults: { _controller: CleanAPIBundle:UserRe:checkEmailCode }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*    
+
+clean_api_api_cancelUserInfo:
+    path:  /api{_splitword}{_locale}/cancelUserInfo
+    defaults: { _controller: CleanAPIBundle:UserRe:cancelUserInfo }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*  
+
+clean_api_api_resetMachineNetStatus:
+    path:  /api{_splitword}{_locale}/resetMachineNetStatus
+    defaults: { _controller: CleanAPIBundle:UserRe:resetMachineNetStatus }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*  
+
+clean_api_api_synchronizeAppVersion:
+    path:  /api{_splitword}{_locale}/synchronizeAppVersion
+    defaults: { _controller: CleanAPIBundle:UserRe:synchronizeAppVersion }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*  
+
+clean_api_api_getAPPAdvertisementList:
+    path:  /api{_splitword}{_locale}/getAPPAdvertisementList
+    defaults: { _controller: CleanAPIBundle:BasicInfo:getAPPAdvertisementList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*  
+
+
+clean_api_OQC_index:
+    path:  /OQC{_splitword}{_locale}/index
+    defaults: { _controller: CleanAPIBundle:OQC:check }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_OQC_checkSubmit:
+    path:  /OQC{_splitword}{_locale}/checkSubmit
+    defaults: { _controller: CleanAPIBundle:OQC:checkSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_OQC_OQC:
+    path:  /OQC{_splitword}{_locale}/reset
+    defaults: { _controller: CleanAPIBundle:OQC:OQC }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*       
+        
+clean_api_OQC_uploadOQCSnExcel:
+    path:  /OQC{_splitword}{_locale}/uploadOQCSnExcel
+    defaults: { _controller: CleanAPIBundle:OQC:uploadOQCSnExcel }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_OQC_OQCList:
+    path:  /OQC{_splitword}{_locale}/OQCList
+    defaults: { _controller: CleanAPIBundle:OQC:OQCList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_OQC_getOQCList:
+    path:  /OQC{_splitword}{_locale}/getOQCList
+    defaults: { _controller: CleanAPIBundle:OQC:getOQCList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+
+#天猫精灵
+clean_api_api_loginAuthentication:
+    path:  /api{_splitword}{_locale}/loginAuthentication
+    defaults: { _controller: CleanAPIBundle:AliGenie:loginAuthentication }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_api_getToken:
+    path:  /token
+    defaults: { _controller: CleanAPIBundle:AliGenie:getToken }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_api_transmitData:
+    path:  /api{_splitword}{_locale}/transmitData
+    defaults: { _controller: CleanAPIBundle:AliGenie:transmitData }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_api_api_response:
+    path:  /api{_splitword}{_locale}/response
+    defaults: { _controller: CleanAPIBundle:AliGenie:response }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*   
+
+
+#叮咚音箱
+clean_api_dingdong_loginAuth:
+    path:  /api{_splitword}{_locale}/loginAuth
+    defaults: { _controller: CleanAPIBundle:DingDong:loginAuth }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_api_dingdong_cloudInter:
+    path:  /api{_splitword}{_locale}/cloudInter
+    defaults: { _controller: CleanAPIBundle:DingDong:cloudInter }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+#叮咚音箱-京东
+clean_api_jdwhale_loginAuth:
+    path:  /api{_splitword}{_locale}/authorize
+    defaults: { _controller: CleanAPIBundle:Jdwhale:loginAuth }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_api_jdwhale_inter:
+    path:  /api{_splitword}{_locale}/inter
+    defaults: { _controller: CleanAPIBundle:Jdwhale:inter }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_api_jdwhale_authToken:
+    path:  /api{_splitword}{_locale}/access_token
+    defaults: { _controller: CleanAPIBundle:Jdwhale:authToken }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_api_jdwhale_callSkill:
+    path:  /api{_splitword}{_locale}/skill
+    defaults: { _controller: CleanAPIBundle:Jdwhale:callSkill }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+# 磁盘使用率  邮件
+clean_api_Email_rootDisk:
+    path:  /api{_splitword}{_locale}/rootDisk
+    defaults: { _controller: CleanAPIBundle:Email:rootDisk }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_api_Email_homeDisk:
+    path:  /api{_splitword}{_locale}/homeDisk
+    defaults: { _controller: CleanAPIBundle:Email:homeDisk }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_api_Email_appMonitor:
+    path:  /api{_splitword}{_locale}/appMonitor
+    defaults: { _controller: CleanAPIBundle:Email:appMonitor }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*

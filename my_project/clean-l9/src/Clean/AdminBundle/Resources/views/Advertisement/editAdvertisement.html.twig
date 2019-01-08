@@ -1,0 +1,244 @@
+{% include 'CleanAdminBundle:Common:meta.html.twig' %}
+<title>修改广告</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 修改广告 <span class="c-gray en">&gt;</span> 更新 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+
+<article class="page-container">
+    <form class="form form-horizontal" id="form" action="/admin/editAdvertisementSubmit?advertisementId={{entity.advertisementId}}" method="post">  
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">广告位置：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <select id="advertisementPlaceId" name="advertisementPlaceId" class="form-control"><!--此处需绑定列表-->
+                    {% for placeItem in placeList %}
+                      {% if placeItem.advertisementPlaceId==entity.advertisementPlaceId %}
+                      <option selected value="{{ placeItem.advertisementPlaceId }}">{{ placeItem.placeName|raw }}</option>
+                      {% else %}
+                      <option value="{{ placeItem.advertisementPlaceId }}">{{ placeItem.placeName|raw }}</option>
+                      {%endif%}
+                    {% endfor %}
+                </select>
+            </div>
+        </div>         
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">广告标题：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{ entity.title|raw }}" placeholder="输入广告标题" id="title" name="title">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">广告图片：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{ entity.fileUrl|raw }}" placeholder="输入广告图片" id="fileUrl" name="fileUrl">
+            </div>
+        </div>
+        {#<div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">广告链接：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{ entity.advertisementUrl|raw }}" placeholder="输入广告链接" id="advertisementUrl" name="advertisementUrl">
+            </div>
+        </div>#}
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">语言：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <select id="language" name="language" class="form-control">                             
+                     <option value="cn" {% if entity.language=='cn' %}selected{% endif %}>中文</option>   
+                     <option value="en" {% if entity.language=='en' %}selected{% endif %}>英文</option>       
+                </select>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">排序：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" id="sortId" name="sortId"  value="{{ entity.sortId }}" placeholder="输入排序">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">购买链接：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{ entity.url|raw}}" placeholder="输入购买链接" id="url" name="url">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">描述：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <textarea name="description" id="description" class="textarea"  placeholder="更新内容" datatype="*0-100" dragonfly="true" nullmsg=""> {{ entity.description|raw }} </textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
+            </div>
+        </div> 
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn btn-primary radius" id="submit" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>                
+                <button id="reset" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</article>
+
+{% include 'CleanAdminBundle:Common:footer.html.twig' %}
+<div style="position:absolute; top:-100px;"><form action="/admin/uploadAdvertisementFile" id="myForm" name="myForm" enctype="multipart/form-data" method="post"><input type="file" id="advertisementFile" name="advertisementFile"><input  type="submit" value="上传" id="app_submit"></form></div>
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/messages_zh.js"></script> 
+<script type="text/javascript" src="/assets/lib/md5.min.js"></script>
+<!-- <script type="text/javascript" src="/assets/js/editAdvertisement.js"></script> -->
+<script>
+    "use strict";
+$(function() {
+    var _bool = false;
+
+    $("#form").validate({
+        rules: {
+            title: {
+                required: true
+            },
+            advertisementPlaceId: {
+                required: true
+            },
+            fileUrl: {
+                required: true
+            }
+        },
+        onkeyup: false,
+        focusCleanup: true,
+        success: "valid",
+        submitHandler: function(form) {
+            // $(form).ajaxSubmit();
+        var title = $('#title').val(),
+          advertisementPlaceId = $('#advertisementPlaceId').val(),
+          fileUrl = $('#fileUrl').val(),
+          language = $('#language').val(),
+          //advertisementUrl = $('#advertisementUrl').val(),
+          url = $('#url').val(),
+          sortId = $('#sortId').val(),
+          description = $('#description').val();
+            if (_bool) {
+                return false;
+            }
+            _bool = true;
+            $.ajax({
+                type: 'post',
+                data: {
+                    title:title,
+                    advertisementPlaceId:advertisementPlaceId,
+                    fileUrl:fileUrl,
+                    language:language,
+                    //advertisementUrl:advertisementUrl,
+                    url:url,
+                    sortId:sortId,
+                    description:description
+                },
+                url: "/admin/editAdvertisementSubmit?advertisementId={{entity.advertisementId}}",
+                success: function(data) {
+                    var data = JSON.parse(data);
+                    if (data.code == 'N00000') {
+                        layer.msg('保存成功!', {
+                            icon: 1,
+                            time: 1000
+                        });
+                        window.parent.location.reload();
+                        // $('#form', window.parent.document).find('.btn-refresh').click();
+                        setTimeout(function() {
+                            $('#reset').trigger('click');
+                        }, 2000);
+                    } else {
+                        layer.msg(data.message, {
+                            icon: 2,
+                            time: 2000
+                        });
+                    }
+                    _bool = false;
+                },
+                error: function(XmlHttpRequest, textStatus, errorThrown) {
+                    layer.msg('网络错误!', {
+                        icon: 2,
+                        time: 2000
+                    });
+                    _bool = false;
+                }
+            });
+        }
+    });
+
+    $('#reset').on('click', function() {
+        layer_close();
+        return false;
+    });
+
+    var _bool = false;
+     (function() {
+       $('#fileUrl').on('click', function(e) {
+         var _e = e.target.files;
+         if (!(_bool && _e)) {
+           $('#advertisementFile').click();
+           _bool = true;
+         }
+       });
+       $('#advertisementFile').on('change', function() {
+         var _fileName = $('#advertisementFile').val();
+         var _flg = matchFileEx(_fileName, 'gif|jpg|jpeg|png');
+         if (!_flg) {
+           _bool = false;
+           layer.msg('附件上传失败，原因可能：文件格式不正确！');
+         } else {
+           _bool = true;
+           $('#myForm').submit();
+         }
+       });
+       var _bar = $('#bar');
+       $('#myForm').ajaxForm({
+         beforeSend: function() {
+           _bool = true;
+         },
+         uploadProgress: function(event, position, total, percentComplete) {
+           var percentVal = '上传完成:' + percentComplete + '%';
+           // _bar.width(percentVal)
+           _bar.html(percentVal);
+         },
+         success: function() {
+           var percentVal = '上传完成:' + '100%';
+           // _bar.width(percentVal)
+           _bar.html(percentVal);
+           _bool = false;
+         },
+         complete: function(xhr) {
+           var result = $.parseJSON(xhr.responseText);
+           if (result.code == 'N00000') {
+             $('#fileUrl').val(result.data);
+             layer.msg('附件上传成功!');
+           } else {             
+             layer.msg('附件上传失败,原因可能:' + result.message);
+           }
+           _bar.html('');           
+           _bool = false;
+         }
+       });
+     })();
+   
+/*
+@param File 文件名
+@param Ex 后缀名 
+@matchFileEx('api.jpg','gif|jpg|jpeg|png')
+ */
+function matchFileEx(File, Ex) {
+  var _File = File;
+  var _Ex = Ex;
+  if (!_Ex) {
+    return true;
+  }
+  if (!_File) {
+    return false;
+  }
+  _File = _File.toLowerCase();
+  var _flg = _File.match(eval('/\.+(' + _Ex + ')$/i'));
+  //console.log('flg:' + _flg);
+  if (_flg != null && _flg != undefined) {
+    return true;
+  } else {
+    return false;
+  }
+}
+});
+</script>
+</body>
+</html>

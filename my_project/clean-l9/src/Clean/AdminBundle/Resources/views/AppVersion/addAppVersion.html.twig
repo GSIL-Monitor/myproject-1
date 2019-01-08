@@ -1,0 +1,76 @@
+{% include 'CleanAdminBundle:Common:meta.html.twig' %}
+<title>APP版本管理</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> APP版本管理 <span class="c-gray en">&gt;</span> 添加 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+
+<article class="page-container">
+    <form class="form form-horizontal" id="form" action="/admin/addAppVersionSubmit" method="post">  
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">公司/型号：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <select name="companyId" id="companyId">
+                    {%if (isAdmin)%}<option value="-1">通用</option>{%endif%}
+                    {% for company in companyInfo %}
+                    <option value="{{company.companyId}}">{{company.companyName|raw}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">机型：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <select name="appType" id="appType">
+                    <option value="1">安卓</option>
+                    <option disabled="" value="2">IOS</option>
+                </select>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">APP名称：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="" placeholder="" id="appName" name="appName">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">版本号：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="" placeholder="" id="versionCode" name="versionCode">
+            </div>
+        </div> 
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">文件上传：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <div class="uploader-thum-container">
+                    <div id="fileList" class="uploader-list"></div>
+                    <div id="filePicker">点击上传</div>
+                    <input readonly="" type="text" class="input-text" value="" placeholder="" id="url" name="url">
+                    <p>后缀为.apk,.ipa文件，否则上传无反应</p>
+                </div>
+            </div>
+        </div> 
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">说明：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <textarea name="description" id="description" class="textarea"  placeholder="更新内容" datatype="*0-100" dragonfly="true" nullmsg="" onKeyUp="$.Huitextarealength(this,500)"></textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn btn-primary radius" id="submit" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>                
+                <button id="reset" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</article>
+
+{% include 'CleanAdminBundle:Common:footer.html.twig' %}
+
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/messages_zh.js"></script> 
+<script type="text/javascript" src="/assets/lib/webuploader/0.1.5/webuploader.min.js"></script>
+<script type="text/javascript" src="/assets/js/addAPPVersion.min.js"></script> 
+</body>
+</html>

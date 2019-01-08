@@ -1,0 +1,112 @@
+菜单 #}
+<aside class="Hui-aside">
+	<input runat="server" id="divScrollValue" type="hidden" value="" />
+	<div class="menu_dropdown bk_2">
+		<dl id="menu-member">
+			<dt><i class="Hui-iconfont">&#xe60d;</i> 会员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/admin/userPageList" data-title="会员列表" href="javascript:;">会员列表</a></li>
+				</ul>
+			</dd>
+		</dl>
+
+		<dl id="menu-machine">
+			<dt><i class="Hui-iconfont">&#xe63c;</i> 机器管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/admin/machinePageList" data-title="机器管理" href="javascript:void(0)">机器管理</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu-article">
+			<dt><i class="Hui-iconfont">&#xe616;</i> 消息推送管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/admin/systemMessagePageList" data-title="消息推送管理" href="javascript:void(0)">消息推送管理</a></li>
+				</ul>
+			</dd>
+		</dl>
+		
+		{%if (isAdmin)%}
+		<dl id="menu-comments">
+			<dt><i class="Hui-iconfont">&#xe62e;</i> 参数设置<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/admin/companyPageList" data-title="公司/型号管理" href="javascript:void(0)">公司/型号管理</a></li>
+					<li><a data-href="/admin/errorCodePageList" data-title="错误码列表" href="javascript:void(0)">错误码列表</a></li>
+					<li><a data-href="/admin/productionPageList" data-title="产品指南" href="javascript:;">产品指南</a></li>
+					<li><a data-href="/admin/goodsUrlPageList" data-title="购买链接" href="javascript:;">购买链接</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu-addAdvertisementPlace">
+			<dt><i class="Hui-iconfont">&#xe64f;      </i>广告<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					{#<li><a data-href="/admin/addAdvertisement" data-title="添加广告" href="javascript:;">添加广告</a></li>#}
+					<li><a data-href="/admin/advertisementPageList" data-title="广告列表" href="javascript:;">广告列表</a></li>
+					{#<li><a data-href="/admin/addAdvertisementPlace" data-title="添加广告位" href="javascript:;">添加广告位</a></li>#}
+					<li><a data-href="/admin/advertisementPlacePageList" data-title="广告位列表" href="javascript:;">广告位列表</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu-firmware">
+			<dt><i class="Hui-iconfont">&#xe696;</i> 版本更新管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/admin/appVersionPageList" data-title="APP版本管理" href="javascript:;">APP版本管理</a></li>
+					<li><a data-href="/admin/firmwarePageList" data-title="固件版本管理" href="javascript:;">机器固件管理</a></li>
+					<li><a data-href="/admin/whiteGroupPageList" data-title="白名单管理" href="javascript:;">白名单管理</a></li></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl id="menu-company">
+			<dt><i class="Hui-iconfont">&#xe62b;</i> 隐私管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/admin/editUserProtocol?language=cn" data-title="中文隐私" href="javascript:void(0)">中文隐私</a></li>
+					<li><a data-href="/admin/editUserProtocol?language=en" data-title="英文隐私" href="javascript:void(0)">英文隐私</a></li>
+					<li><a data-href="/admin/editUserProtocol?language=ko" data-title="韩文隐私" href="javascript:void(0)">韩文隐私</a></li>
+				</ul>
+			</dd>
+		</dl>		
+		{# <dl id="menu-company">
+			<dt><i class="Hui-iconfont">&#xe62b;</i> 公司管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/admin/companyPageList" data-title="公司列表" href="javascript:void(0)">公司列表</a></li>
+				</ul>
+			</dd>
+		</dl> #}	 
+		<dl id="menu-admin">
+			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/admin/adminUserPageList" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
+				</ul>
+			</dd>
+		</dl>
+		{#<dl id="menu-error">
+			<dt><i class="Hui-iconfont">&#xe6c6;</i> 错误码管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>					
+					<li><a data-href="/admin/logPageList" data-title="日志管理" href="javascript:void(0)">日志管理</a></li>
+				</ul>
+			</dd>
+		</dl>
+		 <dl id="menu-debug">
+			<dt><i class="Hui-iconfont">&#xe62e;</i> 调试管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="/admin/logPageList" data-title="日志管理" href="javascript:void(0)">日志管理</a></li>
+					<li><a data-href="/admin/getPath" data-title="清扫记录管理" href="javascript:void(0)">清扫记录管理</a></li>
+					<li><a data-href="/admin/debugPageList" data-title="调试管理" href="javascript:void(0)">日志&清扫记录</a></li>
+				</ul>
+			</dd>
+		</dl> #}		
+		{%endif%}
+	</div>
+</aside>
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+{# 菜单/end #}

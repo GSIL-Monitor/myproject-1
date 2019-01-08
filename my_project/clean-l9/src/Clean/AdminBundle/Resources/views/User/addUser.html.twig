@@ -1,0 +1,103 @@
+{% include 'CleanAdminBundle:Common:meta.html.twig' %}
+<style type="text/css" media="screen">
+  .webuploader-pick{color: #fff;}
+  .webuploader-pick{display: none;}
+</style>
+<title>会员管理</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 会员管理 <span class="c-gray en">&gt;</span> 添加 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+
+<article class="page-container">
+    <form class="form form-horizontal" id="form" action="/admin/addUserSubmit" method="post">
+        {% if(isAdmin)%}  
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">公司/型号：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <select name="companyId" id="companyId">
+                    {%if (isAdmin)%}<option value="-1">通用</option>{%endif%}
+                    {% for company in companyInfo %}
+                    <option value="{{company.companyId}}">{{company.companyName|raw}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        {%endif%}
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">用户名：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="" placeholder="用户名" id="userName" name="userName">
+            </div>
+        </div> 
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">密码：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="password" class="input-text" value="" placeholder="密码" id="password" name="password">
+            </div>
+        </div>       
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">头像上传：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <div class="uploader-thum-container">
+                    <div id="fileList" class="uploader-list"></div>
+                    <div id="filePicker"></div>
+                    <input readonly="" type="text" class="input-text" value="" placeholder="" id="avatar" name="avatar">
+                    <p>后缀为gif,jpg,jpeg,bmp,png文件，否则上传无反应</p>
+                </div>
+            </div>
+        </div> 
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">性别：</label>
+            <div class="formControls col-xs-8 col-sm-9 skin-minimal">
+                <div class="radio-box">
+                    <input type="radio" id="sex-3" value="0" name="sex">
+                    <label for="sex-3">保密</label>
+                </div>
+                <div class="radio-box">
+                    <input name="sex" type="radio" id="sex-1" value="1" checked>
+                    <label for="sex-1">男</label>
+                </div>
+                <div class="radio-box">
+                    <input type="radio" id="sex-2" value="2" name="sex">
+                    <label for="sex-2">女</label>
+                </div>
+                
+            </div>
+        </div> 
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">邮箱：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="" placeholder="邮箱" id="email" name="email">
+            </div>
+        </div> 
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">手机：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="" placeholder="格式示例：+86 13800138000" id="phone" name="phone">
+            </div>
+        </div>  
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">订阅机器SN码：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="" placeholder="订阅机器SN码" id="nowSn" name="nowSn">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn btn-primary radius" id="submit" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>                
+                <button id="reset" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</article>
+
+{% include 'CleanAdminBundle:Common:footer.html.twig' %}
+
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/messages_zh.js"></script> 
+<script type="text/javascript" src="/assets/lib/webuploader/0.1.5/webuploader.min.js"></script>
+<script type="text/javascript" src="/assets/lib/md5.min.js"></script>
+<script type="text/javascript" src="/assets/js/addUser.min.js"></script> 
+</body>
+</html>

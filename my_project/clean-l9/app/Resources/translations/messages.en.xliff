@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="cn" datatype="plaintext" original="file.ext">
+        <body>
+             <trans-unit id="1">
+                <source>权限验证失败</source>
+                <target>Authorization failed.</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>缺少重要参数</source>
+                <target>Missing important parameters.</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>缺少参数</source>
+                <target>Missing parameters.</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>暂无数据</source>
+                <target>No data.</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>数据填写不完整</source>
+                <target>The data you entered is not complete.</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>数据读取成功</source>
+                <target>Data read succeeded.</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>数据读取失败</source>
+                <target>Data read failed.</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>数据异常</source>
+                <target>Data error.</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>数据修改成功</source>
+                <target>Data edit succeeded.</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>数据修改失败</source>
+                <target>Data edit failed.</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>数据添加成功</source>
+                <target>Data add succeeded.</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>数据删除成功</source>
+                <target>Data delete succeeded.</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>服务器错误</source>
+                <target>Server error.</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>数据错误</source>
+                <target>Data error.</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>数据获取成功</source>
+                <target>Data read succeeded.</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>该用户已被禁</source>
+                <target>The user has been banned.</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>您的版本已最新</source>
+                <target>Your  version  is lastest.</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>链接错误</source>
+                <target>Link error.</target>
+            </trans-unit>
+            
+            <!-- 关于用户注册 -->
+           <trans-unit id="19">
+                <source>请输入正确格式的邮箱</source>
+                <target>Please enter a mail in the correct forma.</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>该邮箱已被注册</source>
+                <target>The email address has been registered.</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>该手机号码已被注册</source>
+                <target>This phone number has been registered.</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>用户名非法</source>
+                <target>User name illegal.</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>该设备已被注册</source>
+                <target>The device has been registered.</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>注册成功</source>
+                <target>Registered.</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>注册失败</source>
+                <target>Register failed.</target>
+            </trans-unit>
+
+            <trans-unit id="26">
+                <source>用户信息错误</source>
+                <target>User information error.</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>登陆成功</source>
+                <target>Login successfully.</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>登陆失败</source>
+                <target>Login failed.</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>该用户名已被注册</source>
+                <target>This user name has been registered.</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>原密码输入错误</source>
+                <target>The password is wrong.</target>
+            </trans-unit>
+
+            <trans-unit id="31">
+                <source>缺少数据</source>
+                <target>Missing data.</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>抱歉，该用户不存在</source>
+                <target>Sorry, this user does not exist.</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>该用户已存在，请勿重复添加</source>
+                <target>This user already exists. Please do not repeat it.</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>上传成功</source>
+                <target>Upload successfully.</target>
+            </trans-unit>
+
+
+            <!-- 关于sn -->
+            <trans-unit id="35">
+                <source>该sn无效</source>
+                <target>The SN is invalid.</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>该用户已经添加过此设备</source>
+                <target>This user has already added this device.</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>绑定成功</source>
+                <target>Bind successfully.</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>该设备暂无用户绑定</source>
+                <target>The device is not user bound.</target>
+            </trans-unit>
+            <trans-unit id="39">
+                <source>抱歉，您不是该设备主人，暂无修改权限</source>
+                <target>Sorry, you are not the owner of this device, and have no permission to modify it.</target>
+            </trans-unit>
+            <trans-unit id="40">
+                <source>管理员不能单独删除自己</source>
+                <target>Administrators cannot delete themselves individually.</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>抱歉，您不是该设备主人，暂无添加权限</source>
+                <target>Sorry, you are not the owner of this device, and have no permission to add it.</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>当前设备不在线</source>
+                <target>The device is not online.</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>切换成功</source>
+                <target>Switch successfully.</target>
+            </trans-unit>
+            <trans-unit id="44">
+                <source>您已经解绑扫地机</source>
+                <target>You have bound the sweeper,</target>
+            </trans-unit>
+            <trans-unit id="45">
+                <source>您已经绑定扫地机</source>
+                <target>You have unbound the sweeper,</target>
+            </trans-unit>
+
+           
+            <!-- 关于其他 -->
+            <trans-unit id="100">
+                <source>您已经是最高版本</source>
+                <target>You are the highest version.</target>
+            </trans-unit>
+            <trans-unit id="101">
+                <source>您没有绑定扫地机</source>
+                <target>You do not bind the device.</target>
+            </trans-unit>
+            <trans-unit id="102">
+                <source>暂无版本信息</source>
+                <target>No version information.</target>
+            </trans-unit>
+
+
+            <!-- 关于校验密码 -->
+            <trans-unit id="200">
+                <source>手机号码格式错误</source>
+                <target>Wrong phone number.</target>
+            </trans-unit>
+            <trans-unit id="201">
+                <source>区号格式错误</source>
+                <target>Wrong area code.</target>
+            </trans-unit>
+            <trans-unit id="202">
+                <source>手机号码填写错误</source>
+                <target>Couldn't find your account.</target>
+            </trans-unit>
+            <trans-unit id="203">
+                <source>您已经绑定当前手机号</source>
+                <target>Number already registered.</target>
+            </trans-unit>
+            <trans-unit id="204">
+                <source>发送验证码次数过多，请明天再试</source>
+                <target>Security code </target>
+            </trans-unit>
+            <trans-unit id="205">
+                <source>验证码发送成功</source>
+                <target>Verification code sent.</target>
+            </trans-unit>
+            <trans-unit id="206">
+                <source>验证码获取失败，请勿频繁获取</source>
+                <target>Too many codes sent. Try again later.</target>
+            </trans-unit>
+            <trans-unit id="207">
+                <source>您已经是最高版本</source>
+                <target>You are the highest version.</target>
+            </trans-unit>
+            <trans-unit id="208">
+                <source>验证码格式错误</source>
+                <target>Wrong verification code format.</target>
+            </trans-unit>
+            <trans-unit id="209">
+                <source>验证码错误</source>
+                <target>Verification code invalid.</target>
+            </trans-unit>
+            <trans-unit id="210">
+                <source>密码修改成功</source>
+                <target>Password reset successfully.</target>
+            </trans-unit>
+            <trans-unit id="211">
+                <source>您已经绑定当前邮箱</source>
+                <target>Email already registered.</target>
+            </trans-unit>
+            <trans-unit id="212">
+                <source>验证码失效</source>
+                <target>Verification code expired.</target>
+            </trans-unit>
+            <trans-unit id="213">
+                <source>请用此邮箱重新获取验证码</source>
+                <target>Get new verification code with this email.</target>
+            </trans-unit>
+            <trans-unit id="214">
+                <source>小狗智能</source>
+                <target>Puppyoo</target>
+            </trans-unit>
+            <trans-unit id="215">
+                <source>小狗智能邮件</source>
+                <target>Email from Puppyoo</target>
+            </trans-unit>
+            <trans-unit id="216">
+                <source>30分钟内有效</source>
+                <target>Valid within 30mins.</target>
+            </trans-unit>
+            <trans-unit id="217">
+                <source>校验成功</source>
+                <target>Verify successful.</target>
+            </trans-unit>
+            <trans-unit id="218">
+                <source>注销成功</source>
+                <target>Logout successful.</target>
+            </trans-unit>
+            
+        </body>
+    </file>
+</xliff>

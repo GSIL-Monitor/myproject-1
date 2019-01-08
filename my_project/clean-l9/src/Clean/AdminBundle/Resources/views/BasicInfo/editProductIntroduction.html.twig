@@ -1,0 +1,56 @@
+{% include 'CleanAdminBundle:Common:meta.html.twig' %}
+<title>产品指南管理</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 产品指南管理 <span class="c-gray en">&gt;</span> 编辑 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+
+<article class="page-container">
+    <form class="form form-horizontal" id="formPro" action="/admin/editProductionSubmit" method="post">  
+        <input type="hidden" name="basicInfoId" id="basicInfoId" value="{%if basicInfo.basicInfoId is defined%}{{basicInfo.basicInfoId}}{%endif%}"> 
+
+        <input type="hidden" name="type" id="type" value="{%if basicInfo.type is defined%}{{basicInfo.type}}{%endif%}"> 
+        <input type="hidden" name="lang" id="lang" value="{%if basicInfo.lang is defined%}{{basicInfo.lang}}{%endif%}">
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">描述选项：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{basicInfo.description|raw}}" placeholder="描述选项" id="description" name="description">
+            </div>
+        </div>
+        {# <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">其他语言描述选项：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="{{basicInfo.enDescription|raw}}" placeholder="描述选项" id="enDescription" name="enDescription">
+            </div>
+        </div> #}
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">内容：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <script id="cnContent" type="text/plain" style="width:100%;height:400px;"></script> 
+                <script id="J-cnContent" type="text/plain">{%if basicInfo.content is defined%}{{basicInfo.content|raw}}{%endif%}</script>
+            </div>
+        </div>
+        {# <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">其他语言：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <script id="enContent" type="text/plain" style="width:100%;height:400px;"></script> 
+                <script id="J-enContent" type="text/plain">{%if basicInfo.enContent is defined%}{{basicInfo.enContent|raw}}{%endif%}</script>
+            </div>
+        </div> #}
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn btn-primary radius" id="submit" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>                
+                <button id="reset" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</article>
+
+{% include 'CleanAdminBundle:Common:footer.html.twig' %}
+<script type="text/javascript" src="/assets/lib/ueditor/1.4.3/ueditor.config.js"></script> 
+<script type="text/javascript" src="/assets/lib/ueditor/1.4.3/ueditor.all.min.js"> </script> 
+<script type="text/javascript" src="/assets/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="/assets/js/editProduction.min.js"></script> 
+</body>
+</html>

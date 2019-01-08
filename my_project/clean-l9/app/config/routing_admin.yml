@@ -1,0 +1,2 @@
+clean_admin:
+    resource: "@CleanAdminBundle/Resources/config/routing.yml"

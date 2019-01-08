@@ -1,0 +1,42 @@
+<?php
+namespace Clean\LibraryBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="company")
+ */
+class CompanyEntity
+{
+	/**
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $companyId;
+    
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    protected $companyName;
+    
+    /**
+     * @ORM\Column(type="smallint")
+     */
+    protected $status;
+    
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $createTime;
+    
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $lastUpdate;
+
+
+
+    
+}

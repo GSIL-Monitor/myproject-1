@@ -1,0 +1,8 @@
+
+
+# AcmeDemoBundle routes (to be removed)
+clean_api:
+    resource: "@CleanAPIBundle/Resources/config/routing.yml"
+
+clean_admin:
+    resource: "@CleanAdminBundle/Resources/config/routing.yml"

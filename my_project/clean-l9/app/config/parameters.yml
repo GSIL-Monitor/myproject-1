@@ -1,0 +1,18 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 192.168.160.254
+    database_port: 3306
+    database_name: clean-l9
+    database_user: db_inmotion
+    database_password: Im639()test 
+    
+    mailer_transport: smtp
+    mailer_host: smtp.126.com
+    mailer_user: robotappservice@126.com
+    mailer_password: lexing123
+    
+    locale: en
+    secret: ThisTokenIsNotSoSecretChangeIt
+    
+    

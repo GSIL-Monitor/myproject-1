@@ -1,0 +1,99 @@
+{% include 'CleanAdminBundle:Common:meta.html.twig' %}
+<title>清扫记录列表</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 清扫记录管理 <span class="c-gray en">&gt;</span> 清扫记录列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="text-c"> SN：
+        <input type="text" class="input-text" style="width:400px" placeholder="输入SN" id="sn" name="sn" value="{{sn|raw}}">
+        <button type="submit" class="btn btn-success" id="search" name="search"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+    </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" id="delAllList" class="btn btn-danger radius mr-5"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> {% if sn is empty %}<a href="/admin/getPathZip?sn=" id="zipList" class="btn btn-success radius"><i class="Hui-iconfont">&#xe641;</i> 批量压缩</a>{% else %}{#<a href="javascript:window.history.go(-1);" class="btn btn-success radius">上一级</a>#}{% endif %}</span> <span class="r">共有数据：<strong id="listCount">{{arr|length}}</strong> 条</span> </div>
+    {% if sn is not empty %}
+    <table class="table table-border table-bordered table-bg" id="dataList">
+        <thead>
+            <tr>
+                <th scope="col" colspan="4">清扫记录列表</th>
+            </tr>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="checkAll" value=""></th>                
+                <th>文件名</th>  
+                <th>时间</th>   
+                <th width="100">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for res in arr %}
+           <tr class="text-c">
+                <td width="25"><input type="checkbox" value="{{res.filename}}" name="selDel"></td>                
+                <td><a href="{{res.url}}" title="查看" target="_blank" class="ml-5">{{res.filename}}</a> <a href="/admin/mapFilePath?sn={{sn}}&file={{res.filename}}" name="mapBulid" tabindex="{{loop.index}}" title="{{res.filename}} 预览" class="ml-5 btn-link">预览</a> </td> 
+                <td>{{res.createTime}}</td>      
+                <td width="100"><a title="删除" href="javascript:;" onclick="delSelect(this,'/admin/deletePath?type=1&sn={{sn|raw}}&filenames={{res.filename}})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+            </tr>
+        {% else %} 
+            <tr>
+                <th scope="col" colspan="4">没有记录！</th>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div id="mapBox" style="display:none;">
+        <canvas class="l" id="map"></canvas>
+        <div class="l ml-5 mt-5"> 
+            <p>start: <span id="start"></span></p>
+            <p>end: <span id="end"></span></p> 
+            <p>sweep: <span id="sweep"></span></p> 
+            <p>cleanTime: <span id="cleanTime"></span></p> 
+            <p>isDown: <span id="isDown"></span></p> 
+            <p>isError: <span id="isError"></span></p>
+            <p><label for="range">画点速度：</label></p>
+            <p><input id="range" type="range" min="0" max="1000" value="980" step="1"></p>
+            <p><a href="javascript:;" id="prev" class="ml-10">上一条</a><a href="javascript:;" id="next" class="ml-10">下一条</a></p> 
+    
+        </div>
+    </div>     
+    {% else %}
+    <table class="table table-border table-bordered table-bg" id="dataList">
+        <thead>
+            <tr>
+                <th scope="col" colspan="4">清扫记录列表</th>
+            </tr>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="checkAll" value=""></th>                
+                <th>SN</th>  
+                <th>时间</th>   
+                <th width="100">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for res in arr %}
+           <tr class="text-c">
+                <td width="25"><input type="checkbox" value="{{res.filename}}" name="selDel"></td>                
+                <td><a href="/admin/getPath?sn={{res.filename}}" title="查看" class="ml-5">{{res.filename}}</a></td> 
+                <td>{{res.createTime}}</td>      
+                <td width="100"><a href="/admin/getPathZip?sn={{res.filename}}" name="zip" title="压缩" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe641;</i></a> <a title="删除" href="javascript:;" onclick="delSelect(this,'/admin/deletePath?type=2&snFile={{res.filename}})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+            </tr>
+        {% else %} 
+            <tr>
+                <th scope="col" colspan="4">没有记录！</th>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+
+{% include 'CleanAdminBundle:Common:footer.html.twig' %}
+
+{# <script type="text/javascript" src="/assets/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>  #}
+<script type="text/javascript">
+{% if sn is not empty %}
+   var snIds = 'filenames',type = 1,sn = '{{sn|raw}}';
+{%else%}
+   var snIds = 'snFile',type = 2; 
+{%endif%}
+</script>
+<script type="text/javascript" src="/assets/lib/lz4/lz4.min.js"></script>
+<script type="text/javascript" src="/assets/js/cleanPathList.min.js"></script>
+ </body>
+</html>

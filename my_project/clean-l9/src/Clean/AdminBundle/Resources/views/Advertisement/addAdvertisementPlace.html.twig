@@ -1,0 +1,57 @@
+{% include 'CleanAdminBundle:Common:meta.html.twig' %}
+<title>添加广告位-后台管理</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 添加广告位 <span class="c-gray en">&gt;</span> 添加 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<article class="page-container">
+    <form class="form form-horizontal" id="form" action="/admin/addAdvertisementPlaceSubmit" method="post">
+       <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">名称：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="" placeholder="输入名称" id="placeName" name="placeName">
+            </div>
+        </div>         
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">标识：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="" placeholder="输入标识" id="flag" name="flag">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">广告位高：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="" placeholder="输入广告位高" id="placeHeight" name="placeHeight">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">广告位宽：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <input type="text" class="input-text" value="" placeholder="输入广告位宽" id="placeWidth" name="placeWidth">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">描述：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+                <textarea name="description" id="description" class="textarea"  placeholder="" datatype="*0-100" dragonfly="true" nullmsg=""></textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
+            </div>
+        </div> 
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn btn-primary radius" id="submit" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>                
+                <!--<button id="reset" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button> -->
+            </div>
+        </div>       
+    </form>
+</article>
+
+{% include 'CleanAdminBundle:Common:footer.html.twig' %}
+<div style="position:absolute; top:-100px;"><form action="/admin/uploadAdvertisementFile" id="myForm" name="myForm" enctype="multipart/form-data" method="post"><input type="file" id="advertisementFile" name="advertisementFile"><input  type="submit" value="上传" id="app_submit"></form></div>
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/messages_zh.js"></script> 
+<script type="text/javascript" src="/assets/lib/webuploader/0.1.5/webuploader.min.js"></script>
+<script type="text/javascript" src="/assets/js/addAdvertisementPlace.js"></script>
+
+</body>
+</html>

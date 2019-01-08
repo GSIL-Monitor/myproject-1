@@ -1,0 +1,93 @@
+services:
+#    clean_api.example:
+#        class: Clean\APIBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+
+
+    library_model_clean_adminuser:
+        class: Clean\LibraryBundle\Model\AdminUserModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_company:
+        class: Clean\LibraryBundle\Model\CompanyModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_basicinfo:
+        class: Clean\LibraryBundle\Model\BasicInfoModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_firmware:
+        class: Clean\LibraryBundle\Model\FirmwareModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_appversion:
+        class: Clean\LibraryBundle\Model\AppVersionModel
+        arguments: ['@doctrine.orm.entity_manager']
+        
+    library_model_clean_userinfo:
+        class: Clean\LibraryBundle\Model\UserInfoModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_systemmessage:
+        class: Clean\LibraryBundle\Model\SystemMessageModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+
+    library_model_clean_messagecontent:
+        class: Clean\LibraryBundle\Model\MessageContentModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+
+    library_model_clean_usermachine:
+        class: Clean\LibraryBundle\Model\UserMachineModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_log:
+        class: Clean\LibraryBundle\Model\LogModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_goodsurl:
+        class: Clean\LibraryBundle\Model\GoodsUrlModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_errorcode:
+        class: Clean\LibraryBundle\Model\ErrorCodeModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_errorcodeversion:
+        class: Clean\LibraryBundle\Model\ErrorCodeVersionModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_machinekey:
+        class: Clean\LibraryBundle\Model\MachineKeyModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_machinemap:
+        class: Clean\LibraryBundle\Model\MachineMapModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_machinelog:
+        class: Clean\LibraryBundle\Model\MachineLogModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_whitegroup:
+        class: Clean\LibraryBundle\Model\WhiteGroupModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_whitegroupsn:
+        class: Clean\LibraryBundle\Model\WhiteGroupSnModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_firmwareoperationrecord:
+        class: Clean\LibraryBundle\Model\FirmwareOperationRecordModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_advertisementplace:
+        class: Clean\LibraryBundle\Model\AdvertisementPlaceModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    library_model_clean_advertisement:
+        class: Clean\LibraryBundle\Model\AdvertisementModel
+        arguments: ['@doctrine.orm.entity_manager']
+
+    

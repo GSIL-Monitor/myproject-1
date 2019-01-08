@@ -1,0 +1,70 @@
+﻿{% include 'CleanAdminBundle:Common:meta.html.twig' %}
+<title>APP后台管理系统 - 深圳乐动机器人有限公司</title>
+</head>
+<body>
+{% include 'CleanAdminBundle:Common:header.html.twig' %}
+{% include 'CleanAdminBundle:Common:menu.html.twig' %}
+
+<section class="Hui-article-box">
+	<div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
+		<div class="Hui-tabNav-wp">
+			<ul id="min_title_list" class="acrossTab cl">
+				<li class="active"><span title="我的桌面" data-href="welcome.html">我的桌面</span><em></em></li>
+			</ul>
+		</div>
+		<div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d7;</i></a></div>
+	</div>
+	<div id="iframe_box" class="Hui-article">
+		<div class="show_iframe">
+			<div style="display:none" class="loading"></div>
+			<iframe scrolling="yes" frameborder="0" src="/admin/userPageList"></iframe>
+		</div>
+	</div>
+</section>
+
+<div class="contextMenu" id="Huiadminmenu">
+	<ul>
+		<li id="closethis">关闭当前 </li>
+		<li id="closeall">关闭全部 </li>
+	</ul>
+</div>
+
+<article class="page-container" id="editPwd" style="display: none;">
+    <form class="form form-horizontal" id="form" action="/admin/editPassWord" method="post">  
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">旧密码：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+               <input type="password" class="input-text" value="" placeholder="旧密码" id="password" name="password">
+            </div>
+        </div> 
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">新密码：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+               <input type="password" class="input-text" value="" placeholder="新密码" id="password1" name="password1">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">确认新密码：</label>
+            <div class="formControls col-xs-8 col-sm-9"> 
+               <input type="password" class="input-text" value="" placeholder="确认新密码" id="password2" name="password2">
+            </div>
+        </div>             
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button class="btn btn-primary radius" id="submit" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>                
+                <button id="reset" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+</article>
+
+{% include 'CleanAdminBundle:Common:footer.html.twig' %}
+
+<script type="text/javascript" src="/assets/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="/assets/lib/jquery.validation/1.14.0/messages_zh.js"></script> 
+<script type="text/javascript" src="/assets/lib/md5.min.js"></script>
+<script type="text/javascript" src="/assets/js/index.min.js"></script> 
+</body>
+</html>

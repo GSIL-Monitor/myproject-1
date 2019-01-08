@@ -1,0 +1,78 @@
+<?php
+namespace Clean\LibraryBundle\Entity\MachineParts;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="part_admin_user")
+ */
+class PartAdminUserEntity
+{ 
+	/**
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $partAdminUserId;
+
+     /**
+     * @ORM\Column(type="string", length=45)
+     */
+    protected  $userName;
+
+    
+    /**
+     * @ORM\Column(type="string", length=32)
+     */
+    protected  $password;
+
+    /**
+     * @ORM\Column(type="string", length=45)
+     */
+    protected  $realName;
+
+    /**
+     * @ORM\Column(type="smallint")
+     */
+    protected $userLevel;
+
+      /**
+     * @ORM\Column(type="smallint")
+     */
+    protected $status;
+    
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $createTime;
+    
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $lastUpdate;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $lastLoginTime;
+
+    /**
+     * @ORM\Column(type="string", length=32)
+     */
+    protected  $lastLoginIp;
+
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected  $loginCount;
+
+    
+    
+  
+
+   
+
+    
+}

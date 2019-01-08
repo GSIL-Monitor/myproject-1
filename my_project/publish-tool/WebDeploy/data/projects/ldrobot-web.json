@@ -1,0 +1,37 @@
+{
+  "name":"ldrobot-web",
+  "transfer":"default",
+  "cache_dir":"var/cache/admin,var/cache/prod",
+  "local":{
+    "web_dir":"../../chirrey",
+    "config_dir":"../../publish-config",
+    "exclude_dir":"vendor,.settings,app,var,.git,share,jobs",
+    "exclude_file":"public/index.php,.settings,.gitignore,.project,.buildpath"
+  },
+  "backup":{
+    "source_dir":"/mnt/www/move-smarter",
+    "target_dir":"/mnt/publish/backup",
+    "exclude_dir":"vendor,.settings,app,var",
+    "exclude_file":""
+  },
+  "servers":{
+    "ldrobot-web":{
+      "ip":"106.15.231.190",
+      "file_path":"/mnt/www/move-smarter",
+      "cmd":"unzip -o /mnt/publish/temp/app.zip -d /mnt/www/move-smarter",
+      "target_type":1
+    }
+   },
+  "cache":{
+    "prod":{
+      "file_path":"var/cache/prod",
+      "cmd":"",
+      "target_type":1
+    },
+    "admin":{
+      "file_path":"var/cache/admin",
+      "cmd":"",
+      "target_type":1
+    }
+  }
+}

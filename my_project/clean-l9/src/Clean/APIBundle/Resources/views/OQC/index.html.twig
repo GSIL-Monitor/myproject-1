@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>OQC检测重置设备</title>
+<meta name="description" content="OQC检测重置设备">
+<meta name="keywords" content="OQC检测重置设备">
+<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
+<link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/js/vendor/layui/css/layui.css">
+<style type="text/css" media="screen">
+    .layui-tab-item{min-height: 640px; padding: 16px;}
+    .table{width: 100%!important;}
+    .dataTables_wrapper .dataTables_paginate .paginate_button{padding:0!important;}
+    .layui-form{margin-top: 100px;}
+    .form-control{width: auto!important; display: initial!important;}
+</style>
+</head>
+<body>
+<div class="layui-container">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+      <legend>OQC检测重置设备</legend>
+    </fieldset>
+     <div class="layui-tab layui-tab-card">
+          <ul class="layui-tab-title">
+            <li class="layui-this">重置操作</li>
+            <li>记录查看</li>
+          </ul>
+          <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form class="layui-form" action="/OQC/reset">
+                  <div class="layui-form-item">
+                    <label class="layui-form-label">SN</label>
+                    <div class="layui-input-block">
+                      <input id="sn" name="sn" lay-verify="sn" autocomplete="off" placeholder="请输入SN" class="layui-input" type="text">
+                    </div>
+                  </div> 
+                  <div class="layui-form-item">
+                    <div class="layui-input-block">
+                      <button class="layui-btn" lay-submit="" lay-filter="submit">立即提交</button>
+                      <span class="layui-btn layui-btn-primary" id="uploadOQCSnExcel"> <i class="layui-icon">&#xe62f;</i>导入SN表</span>&emsp;<span class="tip"></span>
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="layui-tab-item">
+                <table id="dataList" class="table table-bordered table-striped"></table>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div class="uploader-thum-container" style="position:absolute; top: -1000px;">    
+    <div id="fileList" class="uploader-list"></div>
+    <div id="filePicker">点击上传</div>
+    <input readonly="" type="text" class="input-text" value="" placeholder="" id="url" name="url">
+</div>
+
+<script type="text/javascript" src="/js/vendor/dataTables/jquery-1.12.1.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/vendor/dataTables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/js/vendor/layui/layui.js" charset="UTF-8"></script>
+ 
+<script type="text/javascript" src="/js/vendor/webuploader/0.1.5/webuploader.min.js"></script>
+<script type="text/javascript" src="/js/oqc.js" charset="UTF-8"></script> 
+
+</body>
+</html>

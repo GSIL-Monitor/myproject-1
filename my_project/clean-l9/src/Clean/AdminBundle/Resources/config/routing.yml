@@ -1,0 +1,927 @@
+clean_admin_default:
+    path:  /
+    defaults: { _controller: CleanAdminBundle:Default:index }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_index:
+    path:  /admin{_splitword}{_locale}/index
+    defaults: { _controller: CleanAdminBundle:Default:index }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+        
+clean_admin_login:
+    path:  /admin{_splitword}{_locale}/login
+    defaults: { _controller: CleanAdminBundle:Admin:login }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_loginSubmit:
+    path:  /admin{_splitword}{_locale}/loginSubmit
+    defaults: { _controller: CleanAdminBundle:Admin:loginSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_verifyCodeImage:
+    path:  /admin{_splitword}{_locale}/verifyCodeImage
+    defaults: { _controller: CleanAdminBundle:Admin:verifyCodeImage }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_logout:
+    path:  /admin{_splitword}{_locale}/logout
+    defaults: { _controller: CleanAdminBundle:Admin:logout }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editPassWord:
+    path:  /admin{_splitword}{_locale}/editPassWord
+    defaults: { _controller: CleanAdminBundle:Admin:editPassWord }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_productionPageList:
+    path:  /admin{_splitword}{_locale}/productionPageList
+    defaults: { _controller: CleanAdminBundle:Production:productionPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getProductionPageList:
+    path:  /admin{_splitword}{_locale}/getProductionPageList
+    defaults: { _controller: CleanAdminBundle:Production:getProductionPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editProductionSubmit:
+    path:  /admin{_splitword}{_locale}/editProductionSubmit
+    defaults: { _controller: CleanAdminBundle:Production:editProductionSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editProduction:
+    path:  /admin{_splitword}{_locale}/editProduction
+    defaults: { _controller: CleanAdminBundle:Production:editProduction }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addProduction:
+    path:  /admin{_splitword}{_locale}/addProduction
+    defaults: { _controller: CleanAdminBundle:Production:addProduction }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addProductionSubmit:
+    path:  /admin{_splitword}{_locale}/addProductionSubmit
+    defaults: { _controller: CleanAdminBundle:Production:addProductionSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteProduction:
+    path:  /admin{_splitword}{_locale}/deleteProduction
+    defaults: { _controller: CleanAdminBundle:Production:deleteProduction }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteProductionList:
+    path:  /admin{_splitword}{_locale}/deleteProductionList
+    defaults: { _controller: CleanAdminBundle:Production:deleteProductionList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_firmwarePageList:
+    path:  /admin{_splitword}{_locale}/firmwarePageList
+    defaults: { _controller: CleanAdminBundle:Firmware:firmwarePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getFirmwarePageList:
+    path:  /admin{_splitword}{_locale}/getFirmwarePageList
+    defaults: { _controller: CleanAdminBundle:Firmware:getFirmwarePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addFirmware:
+    path:  /admin{_splitword}{_locale}/addFirmware
+    defaults: { _controller: CleanAdminBundle:Firmware:addFirmware }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addFirmwareSubmit:
+    path:  /admin{_splitword}{_locale}/addFirmwareSubmit
+    defaults: { _controller: CleanAdminBundle:Firmware:addFirmwareSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_uploadFirmwareFile:
+    path:  /admin{_splitword}{_locale}/uploadFirmwareFile
+    defaults: { _controller: CleanAdminBundle:Firmware:uploadFirmwareFile }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editFirmware:
+    path:  /admin{_splitword}{_locale}/editFirmware
+    defaults: { _controller: CleanAdminBundle:Firmware:editFirmware }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editFirmwareSubmit:
+    path:  /admin{_splitword}{_locale}/editFirmwareSubmit
+    defaults: { _controller: CleanAdminBundle:Firmware:editFirmwareSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteFirmwareList:
+    path:  /admin{_splitword}{_locale}/deleteFirmwareList
+    defaults: { _controller: CleanAdminBundle:Firmware:deleteFirmwareList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_checkFirmwarePassword:
+    path:  /admin{_splitword}{_locale}/checkFirmwarePassword
+    defaults: { _controller: CleanAdminBundle:Firmware:checkFirmwarePassword }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_appVersionPageList:
+    path:  /admin{_splitword}{_locale}/appVersionPageList
+    defaults: { _controller: CleanAdminBundle:AppVersion:appVersionPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getAppVersionPageList:
+    path:  /admin{_splitword}{_locale}/getAppVersionPageList
+    defaults: { _controller: CleanAdminBundle:AppVersion:getAppVersionPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addAppVersion:
+    path:  /admin{_splitword}{_locale}/addAppVersion
+    defaults: { _controller: CleanAdminBundle:AppVersion:addAppVersion }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addAppVersionSubmit:
+    path:  /admin{_splitword}{_locale}/addAppVersionSubmit
+    defaults: { _controller: CleanAdminBundle:AppVersion:addAppVersionSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editAppVersion:
+    path:  /admin{_splitword}{_locale}/editAppVersion
+    defaults: { _controller: CleanAdminBundle:AppVersion:editAppVersion }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editAppVersionSubmit:
+    path:  /admin{_splitword}{_locale}/editAppVersionSubmit
+    defaults: { _controller: CleanAdminBundle:AppVersion:editAppVersionSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteAppVersionList:
+    path:  /admin{_splitword}{_locale}/deleteAppVersionList
+    defaults: { _controller: CleanAdminBundle:AppVersion:deleteAppVersionList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_uploadAppVersionFile:
+    path:  /admin{_splitword}{_locale}/uploadAppVersionFile
+    defaults: { _controller: CleanAdminBundle:AppVersion:uploadAppVersionFile }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_userPageList:
+    path:  /admin{_splitword}{_locale}/userPageList
+    defaults: { _controller: CleanAdminBundle:User:userPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getUserPageList:
+    path:  /admin{_splitword}{_locale}/getUserPageList
+    defaults: { _controller: CleanAdminBundle:User:getUserPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addUser:
+    path:  /admin{_splitword}{_locale}/addUser
+    defaults: { _controller: CleanAdminBundle:User:addUser }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addUserSubmit:
+    path:  /admin{_splitword}{_locale}/addUserSubmit
+    defaults: { _controller: CleanAdminBundle:User:addUserSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editUser:
+    path:  /admin{_splitword}{_locale}/editUser
+    defaults: { _controller: CleanAdminBundle:User:editUser }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editUserSubmit:
+    path:  /admin{_splitword}{_locale}/editUserSubmit
+    defaults: { _controller: CleanAdminBundle:User:editUserSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteUserList:
+    path:  /admin{_splitword}{_locale}/deleteUserList
+    defaults: { _controller: CleanAdminBundle:User:deleteUserList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_uploadAvatarFile:
+    path:  /admin{_splitword}{_locale}/uploadAvatarFile
+    defaults: { _controller: CleanAdminBundle:User:uploadAvatarFile }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getUserMachinePageList:
+    path:  /admin{_splitword}{_locale}/getUserMachinePageList
+    defaults: { _controller: CleanAdminBundle:User:getUserMachinePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_admin_systemMessagePageList:
+    path:  /admin{_splitword}{_locale}/systemMessagePageList
+    defaults: { _controller: CleanAdminBundle:SystemMessage:systemMessagePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getSystemMessagePageList:
+    path:  /admin{_splitword}{_locale}/getSystemMessagePageList
+    defaults: { _controller: CleanAdminBundle:SystemMessage:getSystemMessagePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addSystemMessage:
+    path:  /admin{_splitword}{_locale}/addSystemMessage
+    defaults: { _controller: CleanAdminBundle:SystemMessage:addSystemMessage }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addSystemMessageSubmit:
+    path:  /admin{_splitword}{_locale}/addSystemMessageSubmit
+    defaults: { _controller: CleanAdminBundle:SystemMessage:addSystemMessageSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editSystemMessage:
+    path:  /admin{_splitword}{_locale}/editSystemMessage
+    defaults: { _controller: CleanAdminBundle:SystemMessage:editSystemMessage }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editSystemMessageSubmit:
+    path:  /admin{_splitword}{_locale}/editSystemMessageSubmit
+    defaults: { _controller: CleanAdminBundle:SystemMessage:editSystemMessageSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteSystemMessageList:
+    path:  /admin{_splitword}{_locale}/deleteSystemMessageList
+    defaults: { _controller: CleanAdminBundle:SystemMessage:deleteSystemMessageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_companyPageList:
+    path:  /admin{_splitword}{_locale}/companyPageList
+    defaults: { _controller: CleanAdminBundle:Company:companyPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getCompanyPageList:
+    path:  /admin{_splitword}{_locale}/getCompanyPageList
+    defaults: { _controller: CleanAdminBundle:Company:getCompanyPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addCompanySubmit:
+    path:  /admin{_splitword}{_locale}/addCompanySubmit
+    defaults: { _controller: CleanAdminBundle:Company:addCompanySubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editCompanySubmit:
+    path:  /admin{_splitword}{_locale}/editCompanySubmit
+    defaults: { _controller: CleanAdminBundle:Company:editCompanySubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteCompanyList:
+    path:  /admin{_splitword}{_locale}/deleteCompanyList
+    defaults: { _controller: CleanAdminBundle:Company:deleteCompanyList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_adminUserPageList:
+    path:  /admin{_splitword}{_locale}/adminUserPageList
+    defaults: { _controller: CleanAdminBundle:AdminUser:adminUserPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getAdminUserPageList:
+    path:  /admin{_splitword}{_locale}/getAdminUserPageList
+    defaults: { _controller: CleanAdminBundle:AdminUser:getAdminUserPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addAdminUser:
+    path:  /admin{_splitword}{_locale}/addAdminUser
+    defaults: { _controller: CleanAdminBundle:AdminUser:addAdminUser }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addAdminUserSubmit:
+    path:  /admin{_splitword}{_locale}/addAdminUserSubmit
+    defaults: { _controller: CleanAdminBundle:AdminUser:addAdminUserSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editAdminUser:
+    path:  /admin{_splitword}{_locale}/editAdminUser
+    defaults: { _controller: CleanAdminBundle:AdminUser:editAdminUser }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editAdminUserSubmit:
+    path:  /admin{_splitword}{_locale}/editAdminUserSubmit
+    defaults: { _controller: CleanAdminBundle:AdminUser:editAdminUserSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteAdminUserList:
+    path:  /admin{_splitword}{_locale}/deleteAdminUserList
+    defaults: { _controller: CleanAdminBundle:AdminUser:deleteAdminUserList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_machinePageList:
+    path:  /admin{_splitword}{_locale}/machinePageList
+    defaults: { _controller: CleanAdminBundle:Machine:machinePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getMachinePageList:
+    path:  /admin{_splitword}{_locale}/getMachinePageList
+    defaults: { _controller: CleanAdminBundle:Machine:getMachinePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addMachine:
+    path:  /admin{_splitword}{_locale}/addMachine
+    defaults: { _controller: CleanAdminBundle:Machine:addMachine }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addMachineSubmit:
+    path:  /admin{_splitword}{_locale}/addMachineSubmit
+    defaults: { _controller: CleanAdminBundle:Machine:addMachineSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editMachine:
+    path:  /admin{_splitword}{_locale}/editMachine
+    defaults: { _controller: CleanAdminBundle:Machine:editMachine }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editMachineSubmit:
+    path:  /admin{_splitword}{_locale}/editMachineSubmit
+    defaults: { _controller: CleanAdminBundle:Machine:editMachineSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteMachineList:
+    path:  /admin{_splitword}{_locale}/deleteMachineList
+    defaults: { _controller: CleanAdminBundle:Machine:deleteMachineList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getMachineUserList:
+    path:  /admin{_splitword}{_locale}/getMachineUserList
+    defaults: { _controller: CleanAdminBundle:Machine:getMachineUserList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_admin_editUserUp:
+    path:  /admin{_splitword}{_locale}/editUserUp
+    defaults: { _controller: CleanAdminBundle:Machine:editUserUp }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteUserMachine:
+    path:  /admin{_splitword}{_locale}/deleteUserMachine
+    defaults: { _controller: CleanAdminBundle:Machine:deleteUserMachine }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addUserMachine:
+    path:  /admin{_splitword}{_locale}/addUserMachine
+    defaults: { _controller: CleanAdminBundle:Machine:addUserMachine }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_logPageList:
+    path:  /admin{_splitword}{_locale}/logPageList
+    defaults: { _controller: CleanAdminBundle:Log:logPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_debugPageList:
+    path:  /admin{_splitword}{_locale}/debugPageList
+    defaults: { _controller: CleanAdminBundle:Log:debugPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getLogPageList:
+    path:  /admin{_splitword}{_locale}/getLogPageList
+    defaults: { _controller: CleanAdminBundle:Log:getLogPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_admin_deleteLogList:
+    path:  /admin{_splitword}{_locale}/deleteLogList
+    defaults: { _controller: CleanAdminBundle:Log:deleteLogList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getPath:
+    path:  /admin{_splitword}{_locale}/getPath
+    defaults: { _controller: CleanAdminBundle:CleanPath:getPath }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getPathZip:
+    path:  /admin{_splitword}{_locale}/getPathZip
+    defaults: { _controller: CleanAdminBundle:CleanPath:getPathZip }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deletePath:
+    path:  /admin{_splitword}{_locale}/deletePath
+    defaults: { _controller: CleanAdminBundle:CleanPath:deletePath }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_mapFilePath:
+    path:  /admin{_splitword}{_locale}/mapFilePath
+    defaults: { _controller: CleanAdminBundle:CleanPath:mapFilePath }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_goodsUrlPageList:
+    path:  /admin{_splitword}{_locale}/goodsUrlPageList
+    defaults: { _controller: CleanAdminBundle:GoodsUrl:goodsUrlPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getGoodsUrlPageList:
+    path:  /admin{_splitword}{_locale}/getGoodsUrlPageList
+    defaults: { _controller: CleanAdminBundle:GoodsUrl:getGoodsUrlPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addGoodsUrl:
+    path:  /admin{_splitword}{_locale}/addGoodsUrl
+    defaults: { _controller: CleanAdminBundle:GoodsUrl:addGoodsUrl }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addGoodsUrlSubmit:
+    path:  /admin{_splitword}{_locale}/addGoodsUrlSubmit
+    defaults: { _controller: CleanAdminBundle:GoodsUrl:addGoodsUrlSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editGoodsUrl:
+    path:  /admin{_splitword}{_locale}/editGoodsUrl
+    defaults: { _controller: CleanAdminBundle:GoodsUrl:editGoodsUrl }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editGoodsUrlSubmit:
+    path:  /admin{_splitword}{_locale}/editGoodsUrlSubmit
+    defaults: { _controller: CleanAdminBundle:GoodsUrl:editGoodsUrlSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteGoodsUrlList:
+    path:  /admin{_splitword}{_locale}/deleteGoodsUrlList
+    defaults: { _controller: CleanAdminBundle:GoodsUrl:deleteGoodsUrlList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+
+clean_admin_errorCodePageList:
+    path:  /admin{_splitword}{_locale}/errorCodePageList
+    defaults: { _controller: CleanAdminBundle:ErrorCode:errorCodePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getErrorCodePageList:
+    path:  /admin{_splitword}{_locale}/getErrorCodePageList
+    defaults: { _controller: CleanAdminBundle:ErrorCode:getErrorCodePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addErrorCode:
+    path:  /admin{_splitword}{_locale}/addErrorCode
+    defaults: { _controller: CleanAdminBundle:ErrorCode:addErrorCode }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addErrorCodeSubmit:
+    path:  /admin{_splitword}{_locale}/addErrorCodeSubmit
+    defaults: { _controller: CleanAdminBundle:ErrorCode:addErrorCodeSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editErrorCode:
+    path:  /admin{_splitword}{_locale}/editErrorCode
+    defaults: { _controller: CleanAdminBundle:ErrorCode:editErrorCode }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editErrorCodeSubmit:
+    path:  /admin{_splitword}{_locale}/editErrorCodeSubmit
+    defaults: { _controller: CleanAdminBundle:ErrorCode:editErrorCodeSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteErrorCodeList:
+    path:  /admin{_splitword}{_locale}/deleteErrorCodeList
+    defaults: { _controller: CleanAdminBundle:ErrorCode:deleteErrorCodeList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addErrorCodeVersion:
+    path:  /admin{_splitword}{_locale}/addErrorCodeVersion
+    defaults: { _controller: CleanAdminBundle:ErrorCode:addErrorCodeVersion }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editErrorCodeVersion:
+    path:  /admin{_splitword}{_locale}/editErrorCodeVersion
+    defaults: { _controller: CleanAdminBundle:ErrorCode:editErrorCodeVersion }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+clean_admin_machineLogPageList:
+    path:  /admin{_splitword}{_locale}/machineLogPageList
+    defaults: { _controller: CleanAdminBundle:MachineLog:machineLogPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getMachineLogPageList:
+    path:  /admin{_splitword}{_locale}/getMachineLogPageList
+    defaults: { _controller: CleanAdminBundle:MachineLog:getMachineLogPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_uploadMachineExcel:
+    path:  /admin{_splitword}{_locale}/uploadMachineExcel
+    defaults: { _controller: CleanAdminBundle:MachineLog:uploadMachineExcel }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getMachineExcel:
+    path:  /admin{_splitword}{_locale}/getMachineExcel
+    defaults: { _controller: CleanAdminBundle:MachineLog:getMachineExcel }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+#白名单分组
+clean_admin_whiteGroupPageList:
+    path:  /admin{_splitword}{_locale}/whiteGroupPageList
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:whiteGroupPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getWhiteGroupPageList:
+    path:  /admin{_splitword}{_locale}/getWhiteGroupPageList
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:getWhiteGroupPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addWhiteGroupSubmit:
+    path:  /admin{_splitword}{_locale}/addWhiteGroupSubmit
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:addWhiteGroupSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editWhiteGroupSubmit:
+    path:  /admin{_splitword}{_locale}/editWhiteGroupSubmit
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:editWhiteGroupSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteWhiteGroupList:
+    path:  /admin{_splitword}{_locale}/deleteWhiteGroupList
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:deleteWhiteGroupList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+
+clean_admin_whiteGroupSnPageList:
+    path:  /admin{_splitword}{_locale}/whiteGroupSnPageList
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:whiteGroupSnPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getWhiteGroupSnPageList:
+    path:  /admin{_splitword}{_locale}/getWhiteGroupSnPageList
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:getWhiteGroupSnPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addWhiteGroupSnSubmit:
+    path:  /admin{_splitword}{_locale}/addWhiteGroupSnSubmit
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:addWhiteGroupSnSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editWhiteGroupSnSubmit:
+    path:  /admin{_splitword}{_locale}/editWhiteGroupSnSubmit
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:editWhiteGroupSnSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteWhiteGroupSnList:
+    path:  /admin{_splitword}{_locale}/deleteWhiteGroupSnList
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:deleteWhiteGroupSnList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_uploadWhiteGroupSnExcel:
+    path:  /admin{_splitword}{_locale}/uploadWhiteGroupSnExcel
+    defaults: { _controller: CleanAdminBundle:WhiteGroup:uploadWhiteGroupSnExcel }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+#用户协议
+clean_admin_editUserProtocol:
+    path:  /admin{_splitword}{_locale}/editUserProtocol
+    defaults: { _controller: CleanAdminBundle:UserProtocol:editUserProtocol }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editUserProtocolSubmit:
+    path:  /admin{_splitword}{_locale}/editUserProtocolSubmit
+    defaults: { _controller: CleanAdminBundle:UserProtocol:editUserProtocolSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addUserProtocol:
+    path:  /admin{_splitword}{_locale}/addUserProtocol
+    defaults: { _controller: CleanAdminBundle:UserProtocol:addUserProtocol }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addUserProtocolSubmit:
+    path:  /admin{_splitword}{_locale}/addUserProtocolSubmit
+    defaults: { _controller: CleanAdminBundle:UserProtocol:addUserProtocolSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+        
+
+clean_admin_getUserOrMachineIsOnline:
+    path:  /admin{_splitword}{_locale}/getUserOrMachineIsOnline
+    defaults: { _controller: CleanAdminBundle:Machine:getUserOrMachineIsOnline }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+#广告位
+clean_admin_advertisementPlacePageList:
+    path:  /admin{_splitword}{_locale}/advertisementPlacePageList
+    defaults: { _controller: CleanAdminBundle:Advertisement:advertisementPlacePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getAdvertisementPlacePageList:
+    path:  /admin{_splitword}{_locale}/getAdvertisementPlacePageList
+    defaults: { _controller: CleanAdminBundle:Advertisement:getAdvertisementPlacePageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addAdvertisementPlace:
+    path:  /admin{_splitword}{_locale}/addAdvertisementPlace
+    defaults: { _controller: CleanAdminBundle:Advertisement:addAdvertisementPlace }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addAdvertisementPlaceSubmit:
+    path:  /admin{_splitword}{_locale}/addAdvertisementPlaceSubmit
+    defaults: { _controller: CleanAdminBundle:Advertisement:addAdvertisementPlaceSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editAdvertisementPlace:
+    path:  /admin{_splitword}{_locale}/editAdvertisementPlace
+    defaults: { _controller: CleanAdminBundle:Advertisement:editAdvertisementPlace }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editAdvertisementPlaceSubmit:
+    path:  /admin{_splitword}{_locale}/editAdvertisementPlaceSubmit
+    defaults: { _controller: CleanAdminBundle:Advertisement:editAdvertisementPlaceSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteAdvertisementPlaceList:
+    path:  /admin{_splitword}{_locale}/deleteAdvertisementPlaceList
+    defaults: { _controller: CleanAdminBundle:Advertisement:deleteAdvertisementPlaceList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+
+#广告
+clean_admin_advertisementPageList:
+    path:  /admin{_splitword}{_locale}/advertisementPageList
+    defaults: { _controller: CleanAdminBundle:Advertisement:advertisementPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_getAdvertisementPageList:
+    path:  /admin{_splitword}{_locale}/getAdvertisementPageList
+    defaults: { _controller: CleanAdminBundle:Advertisement:getAdvertisementPageList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addAdvertisement:
+    path:  /admin{_splitword}{_locale}/addAdvertisement
+    defaults: { _controller: CleanAdminBundle:Advertisement:addAdvertisement }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_addAdvertisementSubmit:
+    path:  /admin{_splitword}{_locale}/addAdvertisementSubmit
+    defaults: { _controller: CleanAdminBundle:Advertisement:addAdvertisementSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editAdvertisement:
+    path:  /admin{_splitword}{_locale}/editAdvertisement
+    defaults: { _controller: CleanAdminBundle:Advertisement:editAdvertisement }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_editAdvertisementSubmit:
+    path:  /admin{_splitword}{_locale}/editAdvertisementSubmit
+    defaults: { _controller: CleanAdminBundle:Advertisement:editAdvertisementSubmit }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_deleteAdvertisementList:
+    path:  /admin{_splitword}{_locale}/deleteAdvertisementList
+    defaults: { _controller: CleanAdminBundle:Advertisement:deleteAdvertisementList }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+
+clean_admin_uploadAdvertisementFile:
+    path:  /admin{_splitword}{_locale}/uploadAdvertisementFile
+    defaults: { _controller: CleanAdminBundle:Advertisement:uploadAdvertisementFile }
+    requirements:
+        _locale: en|cn|.*
+        _splitword: /|.*
+

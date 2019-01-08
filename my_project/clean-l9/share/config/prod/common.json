@@ -1,0 +1,32 @@
+{
+	"host":"http://www.xiaogou111.com",
+	"port":80,
+	"domain":"http://www.xiaogou111.com",
+	"logPath":"/mnt/www/upload/web-log",
+	"CONNECTOR_DIR":"/mnt/www/clean/jobs/swoole/connections",
+	"CONNECTOR_KEY":"/mnt/www/clean/jobs/swoole/key",
+	"cleanPath":"/mnt/www/upload/cleanfile",
+	"cleanUrl":"http://file.xiaogou111.com/cleanfile",
+	"avatarPath":"/mnt/www/upload/clean-avatar",
+	"avatarUrl":"http://file.xiaogou111.com/clean-avatar",
+	"firmwarePath":"/mnt/www/upload/clean-firmware",
+	"firmwareUrl":"http://file.xiaogou111.com/clean-firmware",
+	"appFilePath":"/mnt/www/upload/clean-appFile",
+	"appFileUrl":"http://file.xiaogou111.com/clean-appFile",
+	"mapPath":"/mnt/www/upload/clean-map",
+	"routePath":"/mnt/www/upload/clean-map-path",
+	"collapseLogPath":"/mnt/www/upload/clean-log/collapse",
+	"collapseLogUrl":"http://file.xiaogou111.com/clean-log/collapse",
+	"ordinaryLogPath":"/mnt/www/upload/clean-log/ordinary",
+	"ordinaryLogUrl":"http://file.xiaogou111.com/clean-log/ordinary",
+	"phoneCodePath":"/mnt/www/file/code/phone",
+	"emailCodePath":"/mnt/www/file/code/email",
+	"whiteGroupExcelPath":"/mnt/www/upload/clean-group-excel",
+	"OQCExcelPath":"/mnt/www/upload/OQC-excel",
+	"advertisementPath":"/mnt/www/upload/ifs",
+	"advertisementUrl":"http://file.xiaogou111.com/ifs",
+
+	"DingDongAesKey":"95e2a661e154a6832b22541eaf2e64ae95e2a661e154a6832b22541eaf2e64ae95e2a661e154a6832b22541eaf2e64ae95e2a661e154a6832b22541eaf2e64ae",
+	"authLoginUrl":"https://www.xiaogou111.com/logon.html"
+}
+

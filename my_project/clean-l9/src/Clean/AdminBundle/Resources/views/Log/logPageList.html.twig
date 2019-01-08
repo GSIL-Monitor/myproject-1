@@ -1,0 +1,45 @@
+{% include 'CleanAdminBundle:Common:meta.html.twig' %}
+<title>日志列表</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 日志管理 <span class="c-gray en">&gt;</span> 日志列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="text-c"> 日期范围：
+        <input type="text" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'endDate\')||\'%y-%M-%d \'}',dateFmt:'yyyy-MM-dd HH:mm:ss' })" id="startDate" class="input-text Wdate" style="width:160px;">
+        -
+        <input type="text" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'startDate\')}',maxDate:'%y-%M-%d',dateFmt:'yyyy-MM-dd HH:mm:ss' })" id="endDate" class="input-text Wdate" style="width:160px;"> 
+        <input type="text" class="input-text" style="width:250px" placeholder="输入SN" id="sn" name="sn" value="{{sn|raw}}">
+        <button type="submit" class="btn btn-success" id="search" name="search"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+    </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" id="delAllList" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a></span> <span class="r">共有数据：<strong id="listCount">0</strong> 条</span> </div>
+    <table class="table table-border table-bordered table-bg" id="dataList">
+        <thead>
+            <tr>
+                <th scope="col" colspan="10">日志列表</th>
+            </tr>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="checkAll" value=""></th> 
+                <th>SN</th>       
+                <th>事件</th>
+                <th>事件类型</th>
+                <th>错误行数</th>
+                <th>坐标</th>
+                <th>错误信息</th>
+                <th>错误时间</th>
+                <th>服务记录时间</th>           
+                <th width="100">操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<div id="page" class="mt-20"></div>
+
+{% include 'CleanAdminBundle:Common:footer.html.twig' %}
+
+<script type="text/javascript" src="/assets/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/assets/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="/assets/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<script type="text/javascript" src="/assets/js/logPageList.min.js"></script>
+ </body>
+</html>
