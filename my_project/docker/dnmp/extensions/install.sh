@@ -47,6 +47,13 @@ if [ "${PHP_REDIS}" != "false" ]; then
     && docker-php-ext-enable redis
 fi
 
+if [ "${PHP_MONGO}" != "false" ]; then
+    mkdir mongo \
+    && tar -xf mongo-${PHP_MONGO}.tgz -C mongo --strip-components=1 \
+    && ( cd mongo && phpize && ./configure && make $mc && make install ) \
+    && docker-php-ext-enable mongodb
+fi
+
 
 if [ "${PHP_XDEBUG}" != "false" ]; then
     mkdir xdebug \

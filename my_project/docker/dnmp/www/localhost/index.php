@@ -1,6 +1,6 @@
 <?php
 
-echo '<h1 style="text-align: center;">欢迎使用DNMP！</h1>';
+//echo '<h1 style="text-align: center;">欢迎使用DNMP！</h1>';
 echo '<h2>版本信息</h2>';
 
 echo '<ul>';

@@ -14,62 +14,29 @@ services:
     networks:
       - default
 
-  php72:
+  php70:
     build:
       context: .
       args:
-        PHP_VERSION: ${PHP72_VERSION}
-        PHP_XDEBUG: ${PHP72_XDEBUG}
-        PHP_SWOOLE: ${PHP72_SWOOLE}
-        PHP_REDIS: ${PHP72_REDIS}
+        PHP_VERSION: ${PHP70_VERSION}
+        PHP_XDEBUG: ${PHP70_XDEBUG}
+        PHP_SWOOLE: ${PHP70_SWOOLE}
+        PHP_REDIS: ${PHP70_REDIS}
+        PHP_MONGO: ${PHP70_MONGO}
         REPLACE_SOURCE_LIST: ${REPLACE_SOURCE_LIST}
+    ports:
+      - "${PHP_SWOOLE_HOST_PORT}:9505"
     volumes:
       - ${SOURCE_DIR}:/var/www/html/:rw
-      - ${PHP72_PHP_CONF_FILE}:/usr/local/etc/php/php.ini:ro
-      - ${PHP72_FPM_CONF_FILE}:/usr/local/etc/php-fpm.d/www.conf:rw
+      - ${PHP70_PHP_CONF_FILE}:/usr/local/etc/php/php.ini:ro
+      - ${PHP70_FPM_CONF_FILE}:/usr/local/etc/php-fpm.d/www.conf:rw
+      - ${PHP70_LOG_DIR}:/mnt/:rw
     restart: always
     cap_add:
       - SYS_PTRACE
     networks:
       - default
 
-  php56:
-    build:
-      context: .
-      args:
-        PHP_VERSION: ${PHP56_VERSION}
-        PHP_XDEBUG: ${PHP56_XDEBUG}
-        PHP_SWOOLE: ${PHP56_SWOOLE}
-        PHP_REDIS: ${PHP56_REDIS}
-        REPLACE_SOURCE_LIST: ${REPLACE_SOURCE_LIST}
-    volumes:
-      - ${SOURCE_DIR}:/var/www/html/:rw
-      - ${PHP56_PHP_CONF_FILE}:/usr/local/etc/php/php.ini:ro
-      - ${PHP56_FPM_CONF_FILE}:/usr/local/etc/php-fpm.d/www.conf:rw
-    restart: always
-    cap_add:
-      - SYS_PTRACE
-    networks:
-      - default
-
-  php54:
-    build:
-      context: .
-      args:
-        PHP_VERSION: ${PHP54_VERSION}
-        PHP_XDEBUG: ${PHP54_XDEBUG}
-        PHP_SWOOLE: ${PHP54_SWOOLE}
-        PHP_REDIS: ${PHP54_REDIS}
-        REPLACE_SOURCE_LIST: ${REPLACE_SOURCE_LIST}
-    volumes:
-      - ${SOURCE_DIR}:/var/www/html/:rw
-      - ${PHP54_PHP_CONF_FILE}:/usr/local/etc/php/php.ini:ro
-      - ${PHP54_FPM_CONF_FILE}:/usr/local/etc/php-fpm.d/www.conf:rw
-    restart: always
-    cap_add:
-      - SYS_PTRACE
-    networks:
-      - default
 
   mysql:
     image: mysql:${MYSQL_VERSION}
@@ -83,6 +50,9 @@ services:
       - default
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+#      MYSQL_DATABASE: symfony
+#      MYSQL_USER: symfony
+#      MYSQL_PASSWORD: symfony
 
   redis:
     image: redis:${REDIS_VERSION}
@@ -90,31 +60,26 @@ services:
       - "${REDIS_HOST_PORT}:6379"
     volumes:
       - ${REDIS_CONF_FILE}:/etc/redis.conf:ro
+      - ${REDIS_DATA_DIR}:/data/:rw
     restart: always
     entrypoint: ["redis-server", "/etc/redis.conf"]
     networks:
       - default
     
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
+  mongo:
+    image: mongo:${MONGO_VERSION}
     ports:
-      - "${PHPMYADMIN_HOST_PORT}:80"
+      - "${MONGO_HOST_PORT}:27017"
+    volumes:
+#      - ${MONGO_CONF_FILE}:/etc/mongo/mongod.conf:ro
+      - ${MONGO_DATA_DIR}:/data/db/:rw
+    restart: always
     networks:
       - default
     environment:
-      - PMA_HOST=mysql
-      - PMA_PORT=3306
+      MONGO_INITDB_ROOT_USERNAME: "${MONGO_ROOT_USERNAME}"
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGO_ROOT_PASSWORD}"
 
-  phpredisadmin:
-    image: erikdubbelboer/phpredisadmin:latest
-    ports:
-      - "${REDISMYADMIN_HOST_PORT}:80"
-    networks:
-      - default
-    environment:
-      - REDIS_1_HOST=redis
-      - REDIS_1_PORT=6379
 
 networks:
   default:
